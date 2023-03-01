@@ -1,0 +1,29 @@
+
+    
+    body {
+        background-color: lightgreen;
+      }
+      
+      h1 {
+        color: green;
+        text-align: center;
+      }
+      h2 {
+        color: green;
+        text-align: left;
+      }
+      p {
+        font-family: verdana;
+        font-size: 20px;
+      }
+
+      #me {
+        color: rgb(255, 0, 119);
+        font: bold;
+        
+    }
+    
+    #meagain {
+        color: rgb(255, 0, 119);
+        font: bold;
+    }

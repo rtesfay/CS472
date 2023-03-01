@@ -1,0 +1,41 @@
+title{
+    color: yellowgreen;
+}
+h1{
+    color: yellowgreen;
+    text-underline-position: below;
+
+}
+span{
+    font-weight: bold;
+}
+.usercomment{
+    background-color: rgba(141, 141, 5, 0.527);
+    color: black;
+    margin: 2%;
+    font-style: italic;
+
+
+}
+body{
+    background-image: url("./recipeImages/silverware.jpg");
+}
+.title_heading{
+    text-decoration: underline;
+
+}
+.foot{
+    float: right;
+
+}.title_heading{
+    color:  rgb(164,164, 0);
+    text-decoration: underline;
+    background-color: rgb(240, 240, 240);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, Verdana, sans-serif;
+    letter-spacing: 0.25em;
+}
+#title {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+}
