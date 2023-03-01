@@ -1,7 +1,7 @@
 
     
     body {
-        background-color: lightgreen;
+        background-color: rgb(218, 238, 144);
       }
       
       h1 {
@@ -18,12 +18,12 @@
       }
 
       #me {
-        color: rgb(255, 0, 119);
-        font: bold;
+        color: green;
+        font: bolder;
         
     }
     
     #meagain {
-        color: rgb(255, 0, 119);
-        font: bold;
+        color: green;
+        font: bolder;
     }
