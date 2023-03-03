@@ -1,3 +1,4 @@
+
 body{
     
     background-image: url(./images/background.png);
@@ -117,7 +118,4 @@ dl{
     margin-top: -16px;
     padding-left: 10px;
     
-}
-#headerimage{
-    width: 100%;
 }
