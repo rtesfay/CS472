@@ -14,100 +14,28 @@
         <main class="container">
 
             <h6>New User Sign up form</h6>
-                        <form action="#" method="post">
-          
-                        <div class="row">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                  <label for="inputPassword6" class="col-form-label">Name</label>
-                                </div>
-                                <div class="col-auto">
-                                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                                </div>
-                                <div class="col-auto">
-                                  <span id="passwordHelpInline" class="form-text">
-                                 
-                                  </span>
-                                </div>
-                              </div> 
-                        </div>
-          
-                        
+            <form action="http://mumstudents.org/params.php">
+                <label>Name :<input type="text" name="username"  maxlength="16" /> <br><br/>
                           <div class="col-md-6 mb-4">
           
-                            <h6 class="mb-2 pb-1">Gender: </h6>
-          
-                            
-          
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                                value="option2" />
-                              <label class="form-check-label" for="maleGender">Male</label>
-                            </div>
+                            <label>Gender : </label>
+                <input type="radio"  value="Male"  /> Male:
+                <input type="radio"  value="Female" checked = "checked" /> Female:<br/><br/>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                                  value="option1" checked />
-                                <label class="form-check-label" for="femaleGender">Female</label>
-                              </div>
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-auto">
-                                      <label for="inputPassword6" class="col-form-label">Age</label>
-                                    </div>
-                                    <div class="col-auto">
-                                      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                                    </div>
-                                    <div class="col-auto">
-                                      <span id="passwordHelpInline" class="form-text">
-                                     
-                                      </span>
-                                    </div>
-                                  </div> 
-                            </div>
-                            
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-auto">
-                                      <label for="inputPassword6" class="col-form-label">Personality Type</label> 
-                                    </div>
-                                    <div class="col-auto">
-                                      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                                    </div>
-                                    <div class="col-auto">
-                                      <span id="passwordHelpInline" class="form-text">
-                                     
-                                      </span>
-                                      <span>(Dont know your type)</span>
-                                    </div>
-                                  </div> 
-                            </div>
-                           
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                            <label class="col-auto">Favorite OS</label>
-                            <select id="passwordHelpInline" class="form-text">
-                              <option value="1" disabled>Choose option</option>
-                              <option value="2">Windows</option>
-                              <option value="3">Apple</option>
-                              <option value="4">Linux</option>
-                            </select>
-                          
-          
-                          </div>
-                        </div>
-                        <div class="row g-3 align-items-center">
-                            <div class="col-auto">
-                              <label for="inputPassword6" class="col-form-label">Seeking Age</label>
-                            </div>
-                            <div class="col-auto">
-                              <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                            </div>
-                            <div class="col-auto">
-                              <span id="passwordHelpInline" class="form-text">
-                             
-                              </span>
-                            </div>
-                          </div> 
-                    </div>
+                <label>Age :<input type="text" size="6" /><br><br>
+                    <label>Personality type :  <input type="text" size ="6">(Don't know your type?)</label><br><br>
+                    <label>Favorite Os :</label>
+                    <select name="favorite Os">
+                        <option>Windows </option>
+                        <option>Mac Osx</option>
+                        <option>Linux</option>
+                    </select><br><br>
+    
+                    <label>Seeking age :</label>
+                        <input type="text" size="6" placeholder="min"> to
+                        <input type="text" size="6" placeholder="max"><br><br>
+                        <br><br>
+                    
           
                         <div class="mt-4 pt-2">
                           <input class="btn btn-primary btn-lg" type="submit" value="Sign up" />
