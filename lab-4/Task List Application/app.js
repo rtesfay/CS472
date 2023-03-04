@@ -1,40 +1,29 @@
-const tasksList = document.getElementById('tasks');
-const addTaskBtn = document.getElementById('add-task-btn');
-const clearTasksBtn = document.getElementById('clear-tasks-btn');
-const newTaskInput = document.getElementById('new-task');
+// get task form, input and list
+const taskForm = document.querySelector('#task-form');
+const taskInput = document.querySelector('#task-input');
+const taskList = document.querySelector('#task-list');
+const clearTasksBtn = document.querySelector('#clear-tasks-btn');
 
-// Load tasks from local storage on page load
-window.onload = function() {
-  if (localStorage.getItem('tasks')) {
-    tasksList.innerHTML = localStorage.getItem('tasks');
-  }
-};
+// add task event
+taskForm.addEventListener('submit', addTask);
 
-// Save tasks to local storage
-function saveTasks() {
-  localStorage.setItem('tasks', tasksList.innerHTML);
-}
+// clear tasks event
+clearTasksBtn.addEventListener('click', clearTasks);
 
-// Add a new task to the list
-function addTask() {
-  const taskDescription = newTaskInput.value.trim();
-  if (taskDescription !== '') {
-    const newTaskItem = document.createElement('li');
-    newTaskItem.classList.add('task-item');
-    newTaskItem.innerHTML = taskDescription + '<button class="delete-task-btn">x</button>';
-    tasksList.appendChild(newTaskItem);
-    newTaskInput.value = '';
-    saveTasks();
-  }
-}
+// load tasks from localStorage
+document.addEventListener('DOMContentLoaded', loadTasks);
 
-// Remove a task from the list
-function deleteTask(event) {
-  if (event.target.classList.contains('delete-task-btn')) {
-    event.target.parentNode.remove();
-    saveTasks();
-  }
-}
+function addTask(e) {
+  e.preventDefault();
+}// get task value
+  const taskValue = taskInput.value.trim();
+  if(taskValue !== '') {
+    // create task item
+    const taskItem = document.createElement('li');
+    taskItem.classList.add('task-item');
+    taskItem.innerHTML = `
+      <span>${taskValue}</span>
+      <button class="delete-task-btn">Delete</button>
+    `};
+    // add task to
 
-// Clear all tasks from the list
-function clearTasks()

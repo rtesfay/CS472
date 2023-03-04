@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Task List Application</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Task List Application</h1>
-  <div id="task-list">
-    <input type="text" id="new-task" placeholder="Enter task description...">
-    <button id="add-task-btn">Add Task</button>
-    <button id="clear-tasks-btn">Clear Tasks</button>
-    <ul id="tasks"></ul>
+  <div class="container">
+    <h1>Task List Application</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Add Task...">
+      <button type="submit" id="add-task-btn">Add Task</button>
+      <button type="button" id="clear-tasks-btn">Clear Tasks</button>
+    </form>
+    <ul id="task-list"></ul>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
