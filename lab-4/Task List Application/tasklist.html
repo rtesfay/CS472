@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Task List Application</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
-  <div class="container">
-    <h1>Task List Application</h1>
-    <form id="task-form">
-      <input type="text" id="task-input" placeholder="Add Task...">
-      <button type="submit" id="add-task-btn">Add Task</button>
-      <button type="button" id="clear-tasks-btn">Clear Tasks</button>
-    </form>
-    <ul id="task-list"></ul>
-  </div>
-  <script src="app.js"></script>
+
+    <div style="display: flex;">
+        <div style="margin-right: 200px;">
+            <h1>Task List</h1>
+            <p>Task</p>
+            <input id="newToDo" />
+            <button onclick="addTaskClicked()" >Add Task</button>
+            <button onclick="clearTasksClick()">Clear Tasks</button>
+        </div>
+
+        <div>
+            <p>Task List</p>
+            <textarea id="todos" cols="50" rows="10">
+
+            </textarea>
+        </div>
+    </div>
+
+    <script>
+        const todos = document.getElementById("todos")
+        const newToDoInput = document.getElementById("newToDo")
+
+        let todoList = []
+
+        function addTaskClicked() {
+            const todo = newToDoInput.value
+            todoList.push(todo)
+            todos.innerHTML = todoList.join("\n")
+        }
+
+        function clearTasksClick() {
+            todoList = []
+            todos.innerHTML = ""
+        }
+    </script>
+
 </body>
 </html>
