@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://mumstudents.org/cs472/2023-03-BL/labs/DecorateMyText/6/decoratemytext.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Text Decorator</title>
+		<link href="./Text Decorator_files/decoratemytext.css" type="text/css" rel="stylesheet">
+
+		
+		<!-- link to your script file here -->
+		
+	</head>
+
+	<body>
+		<h1>Text Decorator</h1>
+		
+		<div>
+			<img src="./Text Decorator_files/decorated.gif" alt="very decorated!">
+		</div>
+
+		<!-- Your UI controls go here -->
+
+		<div>
+			<fieldset>
+				<legend>Text</legend>
+				<textarea id="text" rows="4" cols="30">sample item 1
+sampel time 2
+				</textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Decoration</legend>
+				<button>Bigger Decorations</button>
+				
+				<div><input id="check" onchange="checkboxChanged()" type="checkbox"> Bling</div>
+			</fieldset>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+		<script>
+				document.getElementById("text").style.fontSize = "24px";
+
+				function checkboxChanged() {
+
+					if (document.getElementById("check").checked) {
+						document.getElementById("text").style.fontWeight = 'bold'
+						document.getElementById("text").style.color = 'green'
+						document.getElementById("text").style.textDecoration = 'underline'
+					} else {
+						document.getElementById("text").style.fontWeight = 'normal'
+						document.getElementById("text").style.color = 'black'
+						document.getElementById("text").style.textDecoration = 'none'
+					}
+				}
+
+		</script>
+	
+
+</body></html>
