@@ -1,56 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nerd LUV tm</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+<html>
+    <head>
+        <title>NerdLuv</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="form.css" type="text/css" rel="stylesheet" />
     </head>
-    <header>
-      <a href="/index.html">home page</a>
-  </header>  
-
-        
-    <body>
-        <main class="container">
-
-            <h6>New User Sign up form</h6>
-            <form action="http://mumstudents.org/params.php">
-                <label>Name :<input type="text" name="username"  maxlength="16" /> <br><br/>
-                          <div class="col-md-6 mb-4">
-          
-                            <label>Gender : </label>
-                <input type="radio"  value="Male"  /> Male:
-                <input type="radio"  value="Female" checked = "checked" /> Female:<br/><br/>
-
-                <label>Age :<input type="text" size="6" /><br><br>
-                    <label>Personality type :  <input type="text" size ="6">(Don't know your type?)</label><br><br>
-                    <label>Favorite Os :</label>
-                    <select name="favorite Os">
-                        <option>Windows </option>
-                        <option>Mac Osx</option>
-                        <option>Linux</option>
-                    </select><br><br>
     
-                    <label>Seeking age :</label>
-                        <input type="text" size="6" placeholder="min"> to
-                        <input type="text" size="6" placeholder="max"><br><br>
-                        <br><br>
+    <body>
+        <div id="bannerarea">
+            <img src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/4/nerdluv.png" alt="banner logo" /> <br />
+            where meek geeks meet
+        </div>
+    
+        <div>
+    
+           
+            <fieldset>
+                <legend id="usersign">New User Signup:</legend>
+            <table >
+            <form action="https://mumstudents.org//params.php" enctype="multipart/form-data" method="post">
+    
+                    <tr>
+                        <td><label class="heading" >Name:</label></td>
+                        <td><input type="text" name="username" size="16" maxlength="16" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="heading" >Gender:</label></td>
+                        <td><input type="radio" name="gender" id="gmale" value="M" /><label for="gmale">Male</label>
+                            <input type="radio" name="gender" id="gfemale" value="F" checked="checked" /><label for="gfemale">Female</label></td>
+                    </tr>
+                    <tr>
+                        <td><label class="heading" >Age:</label></td>
+                        <td><input type="text" name="age" size="5" maxlength="2" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="heading" >Personality type:</label></td>
+                        <td><input type="text" name="PType" size="6" maxlength="4" />
+                            (<a href="http://www.humanmetrics.com/cgiwin/JTypes2.asp">Don't know your type?</a>)</td>
+                    </tr>	
+                    <tr>
+                        <td><label class="heading" >Favorite OS:</label></td>
+                        <td><select name="FavOS">
+                            <option value="Windows" selected="selected">Windows</option>
+                            <option value="Mac OS X">Mac OS X</option>
+                            <option value="Linux">Linux</option>
+                            
+                          </select></td>
+                    </tr>		
                     
+                    <tr>
+                        <td><label class="heading" >Seeking age:</label></td>
+                        <td><input type="text" name="minage" size="6" maxlength="2" /> and <input type="text" name="maxage" size="5" maxlength="2" /></td>
+                    </tr>
+                    <tr>
+                        <td><input id="submit" type="submit" name="signup" value="Sign Up" /></td>
+                    </tr>
+                </form>
+            </table>  
+                </fieldset>	
           
-                        <div class="mt-4 pt-2">
-                          <input class="btn btn-primary btn-lg" type="submit" value="Sign up" />
-                        </div>
+            <p>
+                <p>This webpage is for Programmers to know eachother and work together in programming </p>
+                <p>Results and page (C) Copyright NerdLuv Inc.</p>
+            </p>
+            <ul>
+                <li>
+                    <a href="signup.html">
+                        <img src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/4/back.gif" alt="icon" />
+                        Back to front page
+                    </a>
+                </li>
+            </ul>
           
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </div>
+    
+        <footer>
+            <div>
+                <a href="https://validator.w3.org/nu/?doc=https://rtesfay.github.io/CS472/" target="balnk"><img src="./w3c-html.png" alt="Valid HTML5" /></a> <br />
+                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://rtesfay.github.io/CS472/" target="blank"><img src="./form.css" alt="Valid CSS" /></a>
             </div>
-          </section>
-          </main>
-</body>
+        </footer>
+		
+    </body>
+
+
 </html>
