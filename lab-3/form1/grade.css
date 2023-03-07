@@ -1,0 +1,38 @@
+body{
+    background-color: antiquewhite;
+    width: 50%;
+}
+
+.gf{
+    width:800px;
+    height: 400px;
+    background-color:aliceblue;
+    border:4px solid gray;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-left:38%;
+    margin-top: 20%;
+   
+}
+
+
+
+
+input[type="text"]{
+font-family: Arial;
+background-color:lightgrey;
+color: Black;
+font-weight: bold;
+}
+input[type="submit"]{
+    
+    font-family: "times new roman";
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    background-image: url("capital.jpg");
+    border: 2px solid black;
+    background-color:lightgrey;
+    border-radius: 30px;
+    color: white;
+}

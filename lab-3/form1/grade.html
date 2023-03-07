@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Retrieve Grade</title>
+
+
+     <link rel="stylesheet" type="text/css" href="./grade.css">
+</head>
+
+<body>
+
+    <fieldset class="gf"><legend class="gradesform">Grades form</legend>
+    <form action="http://mumstudents.org/params.php">
+            <h1>Retrieve your grade</h1>
+
+          <label>  Name:<input type="text" name="q" pattern="[A-Za-z]{9}"> </label><br/>
+            <label>Student ID:<input type="text" name="q"pattern="[A-Za-z]{9}"></label>
+
+            <!--radio--->
+            <p>
+                What is your entery
+                <input type="radio" name="cc" value="May" checked /> May
+                <input type="radio" name="cc" value="August "/> August
+                <input type="radio" name="cc" value="November" /> November
+            </p>
+            <p>
+            What is the director name:
+               <label> <input type="checkbox" name="Melat"/> Melat</label>
+                <label><input type="checkbox" name="Rahel" checked />Rahel</label>
+                <label><input type="checkbox" name="Tensay" checked />Tensay</label>
+            </p>
+           <p>for which Assigment you want Grade 
+            <select name="favoritecharacter">
+                <option>Lab0</option>
+                <option>Lab1</option>
+                <option selected>Home Work1</option>
+                <option>Home Work2</option>
+             </select>
+            </p>
+
+            Get Grade!<input name="submit" type="submit" />
+       
+
+
+    </form>
+    </fieldset>
+</body>
+
+
+
+</html>
