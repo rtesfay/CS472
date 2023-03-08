@@ -1,4 +1,4 @@
-// CSE 190 M, Homework 6: ASCIImation
+// CSE 190 M, Homework 7: ASCIImation
 // This file contains the ASCII animations as large strings.
 //
 // You can refer to them by variable names such as blank or dive, or by indexes
