@@ -14,30 +14,32 @@ described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of 
 these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
 requirement.-->
 </head>
-<!--Answer:
-To implement the new requirement, we can modify the existing JavaScript (jQuery) code for the "Go Vegetarian" 
-button of the Webville Eatery menu as follows:
-
--Find all the elements with the class "turkey" in the ingredient list.
--Replace the text "Turkey" with "Mashed Potatoes" in those elements.
--->
 <body>
-    <!--Here's the modified code:-->
-    <script>$(document).ready(function() {
-        $('#veggieButton').click(function() {
-          // Find all the elements with class "turkey" in the ingredient list
-          $('.turkey').each(function() {
-            // Replace the text "Turkey" with "Mashed Potatoes" in those elements
-            $(this).text($(this).text().replace('Turkey', 'Mashed Potatoes'));
-          });
-          // Hide the "Go Vegetarian" button
-          $(this).hide();
-        });
-      });</script>
-    <!--Explanation: In the above code, we added the $('.turkey').each() function to find all elements with the class "turkey" 
+   <p>
+    Answer:
+    To implement the new requirement, we can modify the existing JavaScript (jQuery) code for the "Go Vegetarian" 
+    button of the Webville Eatery menu as follows:
+    
+    -Find all the elements with the class "turkey" in the ingredient list.
+    -Replace the text "Turkey" with "Mashed Potatoes" in those elements.
+    <p>Here's the modified code:
+        $(document).ready(function() {
+           $('#veggieButton').click(function() {
+             // Find all the elements with class "turkey" in the ingredient list
+             $('.turkey').each(function() {
+               // Replace the text "Turkey" with "Mashed Potatoes" in those elements
+               $(this).text($(this).text().replace('Turkey', 'Mashed Potatoes'));
+             });
+             // Hide the "Go Vegetarian" button
+             $(this).hide();
+           });
+         });</p>
+     
+Explanation: In the above code, we added the $('.turkey').each() function to find all elements with the class "turkey" 
 and iterate through each of them. Within the loop, we use the .text() method to get the text content of each element, 
 replace the text "Turkey" with "Mashed Potatoes" using the .replace() method, and then set the updated text back to the 
-element using .text(). This replaces all instances of "Turkey" with "Mashed Potatoes" in the ingredient list-->
+element using .text(). This replaces all instances of "Turkey" with "Mashed Potatoes" in the ingredient list
+   </p>
  
 </body>
 </html>
