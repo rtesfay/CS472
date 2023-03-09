@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<!-- 3. Write jQuery code to select the element that comes immediately 
+    before item three and change its background color to blue.-->
+<body>
+   
+<ul>
+ <li>list item 1</li>
+ <li>list item 2</li>
+ <li class="third-item">list item 3</li>
+ <li>list item 4</li>
+ <li>list item 5</li>
+</ul>
+<script>$(document).ready(function() {
+    $(".third-item").prev().css("background-color", "blue");
+  });
+  </script>
+  <!--Explanation: $(document).ready(function() {...}) ensures that the code inside 
+    the function is executed only after the page has finished loading.
+$(".third-item") selects the element with class third-item.
+.prev() selects the immediately preceding sibling element.
+.css("background-color", "blue") sets the CSS background-color property of the selected element to blue.
+-->
+</body>
+</html>

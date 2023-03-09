@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--5. Write Javascript (jQuery) code to change the color of the parent and grandparent list items of 
+    the span of text ("some text") in the following to green.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+   
+<div class="ancestors">
+ <div> (great-grandparent)
+ <ul> (grandparent)
+ <li> (direct parent)
+ <span>some text</span>
+ </li>
+ </ul>
+ </div>
+</div>
+ <!--Answer: Here's the jQuery code to change the color of the parent and grandparent list items of the span of 
+        text "some text" to green:-->
+<script>
+    $(document).ready(function(){
+    //<!—INSERT YOUR JQUERY CODE HERE - - >
+    $('span').parentsUntil('.ancestors').css('color', 'green');
+});
+    </script>
+    <!--Explanation: In the above code, we select the span element using the jQuery selector $('[span]'). 
+        We then use the .parentsUntil() method to select the parent and grandparent list items of the span until 
+        the ancestor element with class "ancestors". Finally, we use the .css() method to change the color of the 
+        selected elements to green.-->
+</body>
+</html>
