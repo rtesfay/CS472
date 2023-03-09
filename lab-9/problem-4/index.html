@@ -22,8 +22,8 @@ requirement.-->
     
     -Find all the elements with the class "turkey" in the ingredient list.
     -Replace the text "Turkey" with "Mashed Potatoes" in those elements.
-    <p>Here's the modified code:
-        $(document).ready(function() {
+    <p>Here's the modified code:</p>
+       <script> $(document).ready(function() {
            $('#veggieButton').click(function() {
              // Find all the elements with class "turkey" in the ingredient list
              $('.turkey').each(function() {
@@ -33,7 +33,7 @@ requirement.-->
              // Hide the "Go Vegetarian" button
              $(this).hide();
            });
-         });</p>
+         });</script>
      
 Explanation: In the above code, we added the $('.turkey').each() function to find all elements with the class "turkey" 
 and iterate through each of them. Within the loop, we use the .text() method to get the text content of each element, 
