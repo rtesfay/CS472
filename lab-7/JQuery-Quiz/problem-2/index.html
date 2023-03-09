@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <header>	<a href="../../../index.html">
+        homepage
+    </a></header>
+    <!--2. Write jQuery code to find all h1 elements that are children of a div element and make their background
+color red.
+Sample HTML:-->
+</head>
+<body>
+    <h1>abc</h1><br><div>
+     <h1>div-1</h1>
+     <h1>div-2</h1>
+     </div>
+     <h1>xyz</h1>
+    </body>
+    <script>$('div > h1').css('background-color', 'red');</script>
+    <!--Explanation:
+•	The $ symbol is used to select elements using jQuery.
+•	div > h1 selects all h1 elements that are children of a div element.
+•	.css('background-color', 'red') sets the background color of the selected elements to red.
+So the above code will select both h1 elements inside the div element ("div-1" and "div-2") and make their 
+background color red.
+-->
+</html>
