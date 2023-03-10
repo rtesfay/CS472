@@ -9,6 +9,29 @@
         homepage
     </a></header>
 <body>
+  <button id="veggiPotato">Veggie</button>
+  <button id="turkey">Turkey</button>
+  <ul>
+
+  <li class="turkeyMeat">Turkey</li>
+  
+
+  </ul>
+  <ul>
+    <li class="potatoVeggie">Mashedpotate</li>
+  </ul>
+<script>
+  $(document).ready(function(){
+    $('#veggiPotato').click(function(){
+      $('#turkey').click(function(){
+        $(this).text().replace('Turkey', 'MashedPotato')
+      });
+      $(this).hide()
+
+    });
+
+  });
+</script>
   
 </body>
 </html>
