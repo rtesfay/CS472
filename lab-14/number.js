@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 var sessions = require('express-session');
 
-var questions = require('./data.js');
+var questions = require('./data');
 
 const ques = questions.questions;
 const ans = questions.answers;
@@ -49,5 +49,10 @@ app.post('/',(req,res)=>{
     }
 })
 
-//const PORT = 3000;
-app.listen(3000);
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+});
+
+const PORT = 3000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
