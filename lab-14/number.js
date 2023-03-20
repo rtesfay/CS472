@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var sessions = require('express-session');
+var session = require('express-session');
+//var sessions = require('express-session');
+
 
 var questions = require('./data');
 
@@ -15,19 +17,17 @@ app.set("view engine","pug");
 
 var count = 0;
 var score = 0;
-var session;
 
-app.use(sessions({
+app.use(session({
     secret: "Salt for cookie signing",
     saveUninitialized: true,
     resave: false
 }));
 
 app.get('/', (req,res)=>{
-    session = req.session;
-    if(session.count || session.score){
-        count = session.count;
-        score = session.score;
+    if(req.session.count || req.session.score){
+        count = req.session.count;
+        score = req.session.score;
     }
     res.render('index',{question:ques[count],score});
 })
@@ -38,6 +38,8 @@ app.post('/',(req,res)=>{
             score++;
         }
         count++
+        req.session.count = count;
+        req.session.score = score;
         res.render('index',{question:ques[count],score})
     }else{
         if(ans[count] === parseInt(req.body.answer)){
@@ -45,6 +47,7 @@ app.post('/',(req,res)=>{
         }
         count = 0;
         res.render('score',{score})
+        req.session.destroy();
         score = 0;
     }
 })
@@ -56,3 +59,4 @@ app.use(function (err, req, res, next) {
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+

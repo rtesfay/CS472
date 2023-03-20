@@ -4,9 +4,12 @@
   "description": "",
   "main": "data.js",
   "scripts": {
-    "dev" : "nodemon number.js",
+    "dev": "nodemon number.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express-session": "^1.17.3"
+  }
 }
