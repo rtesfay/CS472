@@ -16,14 +16,14 @@ function addButtonEventListener() {
                   var array = Object.entries(response.data); 
                   console.log(response.data);
               console.log(array)
-              let results= " ";
+              let results= "";
 
               for(let i =0; i<array.length; i++){
                   let res = JSON.parse(JSON.stringify(response.data[i]));
-                 results+= res.word + "\n" + res.wordtype + res.definition;
-                  document.querySelector("#output").innerHTML = results;
+                 results+= res.word +" "+ res.wordtype+" " + res.definition + '\n';
+                 $("#output").html(results).wrap('<pre />');
               }
-              results=" ";
+              results="";
               }else{
                 document.querySelector("#output").innerHTML = 'word not found';
                   response.message = "No such word found";
