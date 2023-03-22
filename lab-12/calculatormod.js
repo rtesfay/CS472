@@ -23,7 +23,7 @@ exports.displays=function(req,res,vals){
           res.write(String(result));
     res.write("</p>");
     res.write(
-        "<a href='https://rtesfay.github.io/CS472/lab-12/index.html'>simplecalculator page</a>"
+        "<a href='https://rtesfay.github.io/CS472'>simplecalculator page</a>"
       );
     res.write("</body>");
     res.write("</html>");
